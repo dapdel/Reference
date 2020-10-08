@@ -97,6 +97,8 @@ input[type="text"] {};
   background: rgba(0, 128, 0, 0.3);
   background-image: url(pain.jpg);
   background-size: 100% 100%;
+  background-size: auto/length/cover/contain;
+  /*où auto: iamge dans sa tille originale, cover:étirée pour rentrer,contain: image non modifiée dans osn entiereté*/ 
   background-color: blue;
   background-attachment: scroll/fixed/local;
   /* fixed permettra au backgournd de rester fixe alors que le texte pourra être scrollé*/
