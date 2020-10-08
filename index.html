@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--visible sur onglet de page web-->
+
+    <!--lien vers sites d'iconesfontawesome-->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+  <!-- SéMENTIQUE-->
+    <!--en bloc-->
+    <div>
+      <header></header>
+      <main></main>
+      <footer></footer>
+      <section></section>
+      <article></article>
+      <nav></nav>
+      <!--pour une section avec image...-->
+      <figure></figure>
+      <!--... avec sa légende-->
+      <figcaption></figcaption>
+      <aside></aside>
+      <h1></h1>
+      <p></p>
+      <blockquote></blockquote>
+      <!--pour titre d'une oeuvre: en italic-->
+      <cite></cite>
+      <!--pour contenir du code-->
+      <pre>
+        <code></code>
+      </pre>
+      <button></button>
+      <!--balise générique-->
+      <div></div>
+    </div>
+
+    <!--en ligne-->
+    <div>
+      <a></a>
+      <strong></strong>
+      <em></em>
+      <img src="http://image.com" alt="Girl in a jacket" />
+      <abbr></abbr>
+      <sub></sub>
+      <sup></sup>
+      <br />
+      <input /> <!--voir plus bas-->
+
+      <!--balise générique-->
+      <span></span>
+    </div>
+
+  <!--LISTES-->
+    <div>
+      <!-- liste à puces-->
+      <ul>
+        <li></li>
+      </ul>
+      <!-- liste chifréé (par défaut) qui commence ici à 50 OU définie autrement par le type-->
+      <ol start="50" type="1|a|A|i|I">
+        <li></li>
+      </ol>
+    </div>
+
+  <!--TABLEAU-->
+    <div>
+       <!--table row-->
+      <tr>
+        <!--table header:bold and centered-->
+        <th></th>
+      </tr>
+      <tr>
+        <!--table data:regular and left-aligned-->
+        <td></td>
+        <!--table data:regular and left-aligned-->
+      </tr>
+    </table>
+    </div>
+    
+  <!--LIENS-->
+    <div>
+      <!--pour naviguer au sein d'une page: ira là où un id de nom 'bas' ser donné-->
+      <a href="#bas">go to footer</a>
+          <!--vers une autre page-->
+      <a href="contact.html">contact me !</a>
+      <!--vers une page web-->
+      <a title="vers wikipedia" href="https://fr.wikipedia.org/wiki/PageRank"
+        >En savoir plus</a>
+      </div>
+
+  <!--FORM-->
+  <div>
+    <form>
+      <label for="fname">First name:</label><br />
+      <!--l'attribut 'name' doit s'y trouver sinon, le form ne sera ps transmis-->
+      <input type="text" id="fname" name="fname" placeholder="atherine"/><br />
+      <!--placeholder mettra un text vible dans l'input-->
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label>
+
+      <!--propose un choix. Size montre le no° d'éléments visibles-->
+      <select id="cars" name="cars" size="3">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+                <!--'selected' montrera l'option choisie par défaut-->
+        <option value="fiat" selected>Fiat</option>
+      </select>
+
+      <label for="w3review">text introductif:</label>
+      <textarea id="w3review" name="w3review" rows="4" cols="50"> </textarea>
+      
+      <!--pour sousmission-->
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!--renvoie vers une action à réaliser avec les données
+        et renvoie soit sur une page remplace l'actuel ou vers une autre-->
+    <form action="/action_page.php" target="_blank/_self"></form>
+    
+    <input
+      type="text/number/button/checkbox/color/date/datetime-local/email/file/hidden/
+                        image/month/password/radio/range/reset/search/submit/tel/time/url/week"
+    />
+  </div>
+
+  <!--AUDIO/VIDEO-->
+  <div>
+    <audio controls>
+      <!--controls propose un curseur évolutif-->
+      <source src="horse.mp3" type="audio/mpeg" />
+    </audio>
+    <video width="320" height="240" autoplay>
+      <!--'autoplay' remplace le controls si on veut que ça commence toute de suite-->
+      <source src="movie.mp4" type="video/mp4" />
+    </video>
+  </div>
+  
+  <!--LIEN VERS PAGE JS-->
+    <script src="script.js"></script>
+  </body>
+</html>

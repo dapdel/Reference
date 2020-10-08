@@ -1,0 +1,408 @@
+/*SELECTEURS
+
+* {} pour tout
+section/div/p/a/... 
+.blabla {} :en lien avec une class
+#blabla {} en lien avec un id
+[attr="value"] {}
+
+p::first-letter {}
+p::first-line {}
+div:last-child {} dernier element d'une div
+.toto:first-child {} dernier element d'une classe
+li:nth-child(even/odd) {} elements pair ou impair
+main div:nth-of-type(2) {} le 2e div du 'main'
+
+input:checked {}
+input:focus {} lorsquel'input est cliqué
+button:disabled {}
+button:hover {}
+a:active {}
+a:link {} lien noin-visité
+a:hover {}
+a:visited {}
+  !  a:hover MUST come after a:link and a:visited
+  !  a:active MUST come after a:hover
+
+
+
+", "     pour appliquer à plusieurs sélecteurs
+"  "      pour tous les enfants
+">"    pour les enfant directs
+div ~+p {};   pour l'ement p juste après la div (adjacent sibling)
+div ~ p {};  pour tous les elements p juste après la div (general sibling)
+"div.toto" pour la div ayant la class "toto"
+un peu plus: +, ~...
+::after, ::before
+input[type="text"] {};
+*/
+
+.dimensionnement {
+  width: 50% / px/cm/auto;
+  max-width: 700px;
+  /*si l'appreil est plus petit que 700px, lalargeur s'adaptera*/
+  height: 50% / px/cm/auto;
+  min-height: 10%;
+  margin: length/auto;
+  /*lorsque plusiers données, va dans le sens des aiguille d'une montre:top,right, bottom, left*/
+  margin-top: 30px;
+  margin-right: 20%;
+  margin-bottom: 4cm;
+  margin-left: 2px;
+  padding: 25px 50px 75px 100px;
+  /*idem top/right/bottom/left*/
+  box-sizing: border-box;
+  /*pour que le padding et les margi se mettent bien dans le calcul et pas à l'exterieur*/
+}
+
+.position {
+  display: block/inline/inline-block/none;
+  /*inline-block se ositionnera en inline mais permettra des margin et padding*/
+  visibility: hidden;
+  /*va garder l'espace du block caché */
+  z-index: 2;
+  /* pour faire passer des elements l'un en dessou de l'autre*/
+  position: static/absolute/fixed/relative/sticky;
+  /*le postionnement absolute se fait par/rapport à un contenant qui lui est en position relative ou p-r à la fenêtre*/
+  /*le positionnement relatif se mettra sur sa position par défaut avec left/right/top/bottom*/
+  float: none;
+
+  /*positionnement en dehors du flux... peut contenir left et right*/
+  display: flex;
+  /*à mettre sur le contenant*/
+  flex-direction: row/row-reverse/column/column-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-start/flex-end/center/space-between/space-around;
+  flex-basis: 100px;
+  /*donnera la taille des parties du flex */
+
+  flex-grow: 3;
+  /* à placer sur le contenu et sera 3x plus grand que les autres*/
+  flex-shrink: 2;
+  /*2x plus petit*/
+  align-items: stretch/center/flex-start/flex-end/baseline;
+  /* va permettre de positionner verticalementle texte dans son contenant*/
+}
+
+.background {
+  background: lightblue url("img_tree.gif") no-repeat fixed center;
+  /* peur regourper dans l'odre: 
+    background-color
+    background-image
+    background-repeat
+    background-attachment
+    background-position
+*/
+  opacity: 0.3;
+  background: rgba(0, 128, 0, 0.3);
+  background-image: url(pain.jpg);
+  background-size: 100% 100%;
+  background-color: blue;
+  background-attachment: scroll/fixed/local;
+  /* fixed permettra au backgournd de rester fixe alors que le texte pourra être scrollé*/
+  background-repeat: repeat/repeat-x/repeat-y/no-repeat;
+  background-clip: border-box/padding-box/content-box;
+  /*permettra de positionner le fond d'une section selon le cadre ou son contenu*/
+  background-position: xpos ypos;
+  /*en pixel ou en %*/
+  background-position: left top/left center/left bottom/right top/right
+    center/center center;
+
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  ); /*par défaut de haut en bas*/
+  background-image: linear-gradient(
+    90deg,
+    red,
+    blue
+  ); /*ou défini avec des dégré*/
+  background-image: linear-gradient(
+    red 50%,
+    yellow 90%,
+    blue 100%
+  ); /*enfonction des couleurs à prévaloir*/
+  background-image: repeating-linear-gradient(
+    45deg,
+    red,
+    yellow 10%,
+    green 20%
+  ); /*degradé répté*/
+  background-image: radial-gradient(
+    red,
+    green,
+    blue
+  ); /*les couleurs iront du centre vers l'ext*/
+  background-image: radial-gradient(circle, red, yellow, green);
+  /*par défayt la forme sera elliptique à moins de stipuler un cercle*/
+  background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+  /* pour un effet psychedelique*/
+}
+
+.font {
+  font: italic small-caps bold 12px/30px Georgia, serif;
+  /*pas d'importance dansl'ordre*/
+  font-style: normal/italic/oblique;
+  font-family: "Times New Roman" / Times/Arial/courier,
+    serif/sans-serif/monospace/cursive;
+  font-variant-caps: normal/small-caps/all-small-caps;
+  /*le 'all' fera que les majuscules auont la même taille que les autres*/
+  font-weight: normal/bold/bolder/lighter/number;
+  font-size: medium/xx-small/x-small/small/large/x-large/xx-large/smaller/larger/length;
+  font-size: 10vw/5px/105%;
+  /* où vw reprénete un % de la largeur de l'ecran... la taille du texte se modifiera en fonction de la taille de l'écran*/
+  line-height: normal/number/length;
+  /*ou le number est le no° * la taille de la police*/
+  letter-spacing: normal/length;
+  word-spacing: normal/length;
+
+  /*pour le GOOGLE FONTS on import le lien dans le head :
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">  */
+  font-family: "Sofia";
+}
+
+.nouvelle_police {
+  font-family: Roboto;
+}
+/*pour une fint family qui ne se trouve sur l'ordi:*/
+@font-face {
+  font-family: Roboto;
+  src: url("roboto.eot?") format("eot"), url("roboto.otf") format("truetype"),
+    url("roboto.woff") format("woff");
+  /* une fois la font téléchargée sur internet, trouver les équivalent sur...*/
+}
+
+.text {
+  color: red/#00ff00/rgba(
+    201,
+    76,
+    76,
+    0.3
+  ); /*oùle a est la transparence de 0 à 1*/
+  text-align: left/right/center/justify;
+  text-align-last: right;
+  /* spécifie commes'aligera la dernière*/
+  text-justify: auto/inter-word/inter-character/none;
+  text-transform: none/capitalize/uppercase/lowercase;
+  text-decoration: text-decoration-line text-decoration-color
+    text-decoration-style;
+  text-decoration-line: none/underline/overline/line-through;
+  text-decoration-color: green;
+  text-decoration-style: solid/double/dotted/dashed/wavy;
+  text-indent: length;
+  line-height: 0.8;
+  /*pour definir la hauteur de la ligne*/
+
+  overflow: visible/hidden/scroll/auto;
+  /*gestion du texte si celui-ci est plus grand que le contenant ! visible, il risque de sortir du cadre*/
+  text-overflow: clip/ellipsis/string;
+  /*dans le cas où le overflow est hidden, il sera coupé, avec 3petits points, ou 3 tirets*/
+
+  white-space: normal/nowrap/pre/pre-line/pre-wrap;
+  /*en fonction, la ligne réagira autrement lors du passage à la ligne*/
+  direction: rtl;
+  /* direction right to left*/
+  writing-mode: vertical-rl;
+  /* texte mis en vertical*/
+  vertical-align: top/middle/bottom;
+  /* pour l(aligenemnt d'une image dans un text */
+}
+
+.column {
+  /*pour organiserun texte en plusieurs colonnes*/
+  columns: 100px 3;
+  column-width: 100px;
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 1px solid lightblue;
+  /*ligne vrticaleentre les colonnes*/
+  column-rule-style: solid;
+  column-rule-width: 2px;
+  column-rule-color: black;
+  column-span: all;
+  /* l'elementtraversera toutes les colonnes, sinon, juste une*/
+}
+
+.border {
+  box-sizing: content-box/border-box;
+  /*selon qu'on veuille inclure la borduredans le bloc ou pas*/
+  border: 5px solid red;
+  border-style: none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset;
+  border-width: 5px;
+  border-top: 4px dotted blue;
+  border-bottom-color: coral;
+  border-bottom-left-radius: 25px;
+  border-left-style: dotted;
+  /*idem pour top/rightt...*/
+  border-collapse: separate/collapse;
+  /* par défaut, les top et bottom sont collapsed mais pas les eft/right */
+  border-spacing: 15px 50px;
+  /* à utiisr dans les tableaux où il n'y a pas de border-collapse */
+  border-radius: 25px;
+  border-radius: 15px 50px 30px 5px;
+
+  border-image: source slice width outset repeat;
+  border-image-source: url(border.png);
+  border-image-slice: 20%;
+  /*prendra en compte les 20premiers % de l'image*/
+  border-image-width: 30px;
+  border-image-outset: 10px;
+  /* eloigne la bordure de son element*/
+  border-image-repeat: repeat/round/stretch;
+  /*l'image se répète (et est éventuelement coupée), redimensionnée pour ne pas ê coupée, ou étirée*/
+
+  outline: #4caf50 solid 10px;
+  /* se poe à l'exterieur de la border et peut porter les même attributs*/
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+  outline-offset: 15px;
+  /* C'est ce qui le séparera éventuellement de la margin*/
+}
+.liste {
+  list-style-type: circle/square/upper-roman/lower-alpha;
+  list-style-image: url("sqpurple.gif");
+}
+
+.tableau {
+  caption-side: top/bottom;
+  /* permet demettre le titre d'un tableau audessus-ou en dessous*/
+  border-collapse: separate/collapse;
+  /* par défaut, les top et bottom sont collapsed mais pas les eft/right */
+  border-spacing: 15px 50px;
+  /* à utiisr dans les tableaux où il n'y a pas de border-collapse */
+}
+
+img {
+  filter: grayscale(100%);
+  /*transformation en blanc/noir*/
+  filter: blur(4px) / brightness(250%) / contrast(180%) / hue-rotate(180deg) /
+    opacity(50%) / drop-shadow/invert(100%) / sepia(100%) / saturate(7);
+  object-fit: fill/contain/cover;
+  /*fill: l'image sera étirée, contain: l'imge se mettra dedans, cover :l'image sera coupée pour rentrée totalement en gardant ses proportions*/
+}
+
+.ombre {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  /* offset-x / offset-y / blur / spread / color */
+  text-shadow: 2px 2px red;
+  /*ici sans blur et spread*/
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  /*avec plusieurs effets simultanées*/
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /* et ainsi la possibilité de faire un pourtour de texte*/
+}
+
+.transformer {
+  transform: scaleX(2);
+  transform: rotate(45deg);
+  transform: translate(100%);
+  /*va se bouger de 100% de sa taille */
+  transform: translateX(-50%) translateY(-50%);
+  /* peut ë réecrit:*/
+  transform: translate (-50%, -50%);
+  /*transform peut acceuillr plusieurs transformations:*/
+  transform: translateX(-50%) rotateZ(0.5turn) scaleY(2) skewY(20deg);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* va le mettre de maniere par rapport à son coté gauche... mais il faudra utiliser translate pour le dévaler vers les centre:*/
+}
+
+.transition {
+  transition: width 2s, height 2s, transform 2s;
+  /* se posera sur l'element qui va changer (ex avant un hover qui imposera un ou plusieurs changements )*/
+  transition-delay: 1s;
+  /* temps qui passe avant que la transitions se mette en marche*/
+  transition-duration: 3s;
+  transition-property: width;
+  transition-timing-function: linear/ease/ease-in/ease-out/ease-in-out;
+}
+
+.animations {
+  animation: example 5s linear 2s infinite alternate;
+  /*regroupant les différentes option*/
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: 3 / infinite;
+  /*pour définir le nombre de fois que fera l'animation*/
+  animation-direction: normal/reverse/alternate/alternate-reverse;
+  /* définit le sens de l'animation*/
+  animation-fill-mode: forwards/backwards/both/none;
+  /*défnit l'état de l'ement avant et après animation*/
+  animation: example 5s linear 2s infinite alternate;
+  animation-timing-function: linear/ease/ease-in/ease-out/ease-in-out/step-start/step-end/steps(
+      int,
+      start/end
+    ) / cubic-bezier(n, n, n, n) / initial/inherit;
+}
+/*Pour animer il faut définir les différents états de transtion, un temps...
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+ou comme les gradients:
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+  EXEMPLE:
+
+  div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+*/
+/*MEDIA QUERRIES*/
+@media only screen and (max-width: 600px) {
+  /*modifications à effectuer*/
+}
+/* Sur les écrans, quand la largeur de la fenêtre fait au minimum 1280px */
+@media screen and (min-width: 1280px) {
+}
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+}
+/* Sur les téléviseurs */
+@media tv {
+}
+/* Sur tous types d'écrans orientés verticalement */
+@media all and (orientation: portrait) {
+}
+
+/*VARIABLES*/
+:root {
+  --main-bg-color: coral;
+}
+/*definir la variable...*/
+#div1 {
+  background-color: var(--main-bg-color);
+}
+/*...pour l'utiliser ensuite
+
+/*PSEUDO CLASS
+TOOLTIPS:COMMENT FAIRE TRIANGLE?*/
