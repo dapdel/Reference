@@ -1,12 +1,24 @@
 console.log("toto");
-// console.erreur ?
+console.error("erreur!");
+/*réservé pour les messages d'erreur*/
+alert();
+/*pop-up*/
+document.write();
+/* va écrire un message à la place du HTML*/
+window.print();
+/*pour faire une impression*/
+
 //DECLARATION DE VARIABLES
 var a;
+var x, y, z;
 var x = "value";
 var objet = {};
 var arrayListe = [];
 var objects = [{}, [], function() {}];
 var empty = [undefined, null];
+
+
+
 
 
 /*pour une string*///Accédez aux éléments du DOM
@@ -21,6 +33,9 @@ element.parentElement
 /*retournera le parent direct*/
 element.nextElementSibling  /  element.previousElementSibling
 /*retournera l'element suivant ou précédent*/
+
+document.getElementById("demo").innerHTML = "My First JavaScript";
+/*pour écrire dans le HTML*/
 
     if (condition1) {
      
@@ -56,7 +71,11 @@ element.nextElementSibling  /  element.previousElementSibling
     for (x in person) {
       text += person[x];
     }
-    /*boucle sur les propriétés d'un objet*/
+   /*boucle sur les propriétés d'un objet*/
+    break;
+    /*termine un switch ou une loop*/
+    continue;
+   /*sort de la boucle et reprend au dessus/*
 
     /*avec les opérateurs de comparaison
     ===    égal
@@ -71,7 +90,8 @@ element.nextElementSibling  /  element.previousElementSibling
 
     pour résoudre des équation booléenne
     &&     "et" logique
-    ||          "ou inclusif" (ou / et) logique */
+    ||     "ou inclusif" (ou / et) logique 
+  */
 
 //FUNCTION
 function nomDeLaFonction (argument1, argument2,argument3){
@@ -97,6 +117,19 @@ function myFunction() {
   }
 }
 
+var longueurDeLaVarialeTxt = txt.length;
+var IndexPositionDuMotdansUnePhrase = str.indexOf("mot");
+/*Il existe une fonction search() quasi identique*/
+var IndexdeLaDernierePositionDunMotdansUnePhrase = str.lastIndexOf("mot");
+/*indexOf(), and lastIndexOf() return -1 if the text is not found*/
+var pos = str.indexOf("locate",15);
+/*la fonction index permet de rajouter un index ) partir du quel le colmptage se fera
+
+slice(start, end)
+substring(start, end)
+substr(start, length)
+*/
+
 arr1.push("toto");
 /* pour ajouter*/
 arr1.forEach(function(){}); 
@@ -111,3 +144,7 @@ arr1.filter(function(){});
 /* pour filtrer*/
 arr1.reduce(function(){});
 /* pour "réduire"*/
+ date();
+ /* date d'ajd*/
+ displayDate();
+
