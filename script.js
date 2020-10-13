@@ -17,10 +17,6 @@ var arrayListe = [];
 var objects = [{}, [], function() {}];
 var empty = [undefined, null];
 
-
-
-
-
 /*pour une string*///Accédez aux éléments du DOM
 document.getElementById()
 document.getElementsByClassName()
