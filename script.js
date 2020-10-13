@@ -94,6 +94,11 @@ function nomDeLaFonction (argument1, argument2,argument3){
 var nouvelleVariableResultat = actionsARealiser;
 return nouvelleVariableResultat;
 }
+/*
+function (a,b,c){}
+(a,b,c) =>{}
+ce sont deux façons d'écrire une fonction*/
+
 
 /*fonction avec try et catch*/
 function myFunction() {
