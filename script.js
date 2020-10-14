@@ -22,8 +22,20 @@ document.getElementById()
 document.getElementsByClassName()
 document.getElementsByTagName()
 document.querySelector() 
+/*va chercher le premier du genre*/
 /*permet de faire une recherche complexe dans le DOM, en mélangeant plusieurs procédés*/
-	element.children
+var listItems = document.querySelectorAll("li");
+/*va chercher tous du genre et retourne une Nodeliste*/
+var newDiv = document.createElement("div");
+/*lorsuq'on veut créer un nouvelle balise*/
+
+newDiv.innerText = "toto";
+/*retournerale texte sans les balises*/
+totoEl.innerHTML = "<span>coucou</span>";
+bodyEl.addEventListener("mouseover", function () {});
+body.appendChild(newDiv);
+
+element.children
 /*retournera l'enfant direct*/
 element.parentElement
 /*retournera le parent direct*/
