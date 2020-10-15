@@ -9,7 +9,7 @@ section/div/p/a/...
 p::first-letter {}
 p::first-line {}
 div:last-child {} dernier element d'une div
-.toto:first-child {} dernier element d'une classe
+.toto:first-child {} premier element d'une classe
 li:nth-child(even/odd) {} elements pair ou impair
 main div:nth-of-type(2) {} le 2e div du 'main'
 
@@ -98,7 +98,7 @@ input[type="text"] {};
   background-image: url(pain.jpg);
   background-size: 100% 100%;
   background-size: auto/length/cover/contain;
-  /*où auto: iamge dans sa tille originale, cover:étirée pour rentrer,contain: image non modifiée dans osn entiereté*/ 
+  /*où auto: iamge dans sa tille originale, cover:étirée pour rentrer,contain: image non modifiée dans osn entiereté*/
   background-color: blue;
   background-attachment: scroll/fixed/local;
   /* fixed permettra au backgournd de rester fixe alors que le texte pourra être scrollé*/
