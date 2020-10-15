@@ -9,6 +9,7 @@ var arrayListe = [];
 var objects = [{}, [], function() {}];
 var empty = [undefined, null];
 
+<<<<<<< HEAD
 //MESSAGE DANS CONSOLE
 console.log("toto");
 console.log (z[index]);
@@ -23,6 +24,8 @@ document.write();
 window.print();
 /*pour faire une impression*/
 
+=======
+>>>>>>> f8b267143adce6eb805e7474ff210a19771a7f1f
 /*pour une string*///Accédez aux éléments du DOM
 document.getElementById()
 document.getElementsByClassName()
