@@ -98,7 +98,7 @@ input[type="text"] {};
   background-image: url(pain.jpg);
   background-size: 100% 100%;
   background-size: auto/length/cover/contain;
-  /*où auto: iamge dans sa tille originale, cover:étirée pour rentrer,contain: image non modifiée dans osn entiereté*/ 
+  /*où auto: iamge dans sa tille originale, cover:étirée pour rentrer,contain: image non modifiée dans osn entiereté*/
   background-color: blue;
   background-attachment: scroll/fixed/local;
   /* fixed permettra au backgournd de rester fixe alors que le texte pourra être scrollé*/
@@ -166,6 +166,9 @@ input[type="text"] {};
 
   /*pour le GOOGLE FONTS on import le lien dans le head :
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">  */
+
+  /* pour téléche-arger une police on télécharge , on transforme avec transfonter, 
+  on met le lien html et le lien sans css*/
   font-family: "Sofia";
 }
 

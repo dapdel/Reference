@@ -17,17 +17,17 @@ var arrayListe = [];
 var objects = [{}, [], function() {}];
 var empty = [undefined, null];
 
-/*pour une string*///Accédez aux éléments du DOM
-document.getElementById()
-document.getElementsByClassName()
-document.getElementsByTagName()
-document.querySelector() 
+
+//ACCES aux éléments du DOM
+document.getElementById("")
+document.getElementsByClassName("")
+document.getElementsByTagName("")
+document.querySelector("") 
 /*va chercher le premier du genre*/
-/*permet de faire une recherche complexe dans le DOM, en mélangeant plusieurs procédés*/
 var listItems = document.querySelectorAll("li");
 /*va chercher tous du genre et retourne une Nodeliste*/
 var newDiv = document.createElement("div");
-/*lorsuq'on veut créer un nouvelle balise*/
+/*lorsqu'on veut créer un nouvelle balise*/
 
 newDiv.innerText = "toto";
 /*retournerale texte sans les balises*/
@@ -43,12 +43,14 @@ element.nextElementSibling  /  element.previousElementSibling
 /*retournera l'element suivant ou précédent*/
 
 document.getElementById("demo").innerHTML = "My First JavaScript";
-/*pour écrire dans le HTML*/
+/*pour écrire dans le HTML de la section  avec id 'demo'*/
 
+typeof(variable);
+/*renvoie le type de la variable*/
+
+//CONDITIONS
     if (condition1) {
-     
     } else if (condition2){ 
-     
     } else {
       }
     ;
@@ -68,7 +70,7 @@ document.getElementById("demo").innerHTML = "My First JavaScript";
       // code block to be executed
     };
 
-    for (i = 0; i < 5; i++) {
+    for (var i = 0; i < 5; i++) {
       text += "The number is " + i + "<br>";
     };
 
@@ -129,6 +131,16 @@ function myFunction() {
     message.innerHTML = "Input is " + err;
   }
 }
+//STOCKAGE LOCAL
+localStorage.setItem("nomDeClé", "valeur");
+/*pour sauver et enregistrer*/
+localStorage.getItem("nomCeClé")
+/* pour retrouver et charger*/
+
+//METHODES SUR STRING
+
+//METHODES SOR NOMBRE
+
 
 var longueurDeLaVarialeTxt = txt.length;
 var IndexPositionDuMotdansUnePhrase = str.indexOf("mot");
@@ -136,7 +148,7 @@ var IndexPositionDuMotdansUnePhrase = str.indexOf("mot");
 var IndexdeLaDernierePositionDunMotdansUnePhrase = str.lastIndexOf("mot");
 /*indexOf(), and lastIndexOf() return -1 if the text is not found*/
 var pos = str.indexOf("locate",15);
-/*la fonction index permet de rajouter un index ) partir du quel le colmptage se fera
+/*la fonction index permet de rajouter un index à partir du quel le comptage se fera
 
 slice(start, end)
 substring(start, end)
