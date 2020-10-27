@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!--pour que le site soit bien responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!--visible sur onglet de page web-->
@@ -19,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-  <!-- SéMENTIQUE-->
+    <!-- SéMENTIQUE-->
     <!--en bloc-->
     <div>
       <header></header>
@@ -36,12 +37,17 @@
       <h1></h1>
       <p></p>
       <blockquote></blockquote>
+      <q></q>
       <!--pour titre d'une oeuvre: en italic-->
       <cite></cite>
-      <!--pour contenir du code-->
+      <!--pour contenir du code ou autre chose 
+        qui nécessite une mise en page préfdifnie-->
       <pre>
         <code></code>
       </pre>
+      <address></address>
+      <!--pour le titre d'une oeuvre-->
+      <cite></cite>
       <button></button>
       <!--balise générique-->
       <div></div>
@@ -50,20 +56,35 @@
     <!--en ligne-->
     <div>
       <a></a>
-      <strong></strong>
-      <em></em>
-      <img src="http://image.com" alt="Girl in a jacket" />
-      <abbr></abbr>
+      <img src="http://image.com" />
+      <!--pour un abbrévaioation avec 'title':info affichée lors d'un passage de souris-->
+      <abbr title="World Health Organization">WHO</abbr>
       <sub></sub>
       <sup></sup>
       <br />
-      <input /> <!--voir plus bas-->
-
+      <hr />
+      <input />
+      <!--voir plus bas-->
+      <!--FORMATTAGE-->
+      <!--gras vs important (en gras)-->>
+      <b></b>
+      <strong></strong>
+      <!--italique vs emphase (en italique)-->
+      <i></i>
+      <em></em>
+      <small></small>
+      <!--fluoré-->
+      <mark></mark>
+      <!--barré(enlevé)-->
+      <del></del>
+      <!--sousligné(rajouté)-->
+      <ins></ins>
       <!--balise générique-->
       <span></span>
+      <time></time>
     </div>
 
-  <!--LISTES-->
+    <!--LISTES-->
     <div>
       <!-- liste à puces-->
       <ul>
@@ -73,11 +94,21 @@
       <ol start="50" type="1|a|A|i|I">
         <li></li>
       </ol>
+      <!--liste descriptive dd décalage avec element principal dt-->
+      <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+      </dl>
     </div>
 
-  <!--TABLEAU-->
-    <div>
-       <!--table row-->
+    <!--TABLEAU-->
+    <table>
+      <caption>
+        titre du tableau
+      </caption>
+      <!--table row-->
       <tr>
         <!--table header:bold and centered-->
         <th></th>
@@ -87,68 +118,163 @@
         <td></td>
         <!--table data:regular and left-aligned-->
       </tr>
+      <!--prend deux colonnes ou deux rangées-->
+      <th colspan="2"></th>
+      <th rowspan="2"></th>
     </table>
-    </div>
-    
-  <!--LIENS-->
+
+    <!--LIENS-->
     <div>
       <!--pour naviguer au sein d'une page: ira là où un id de nom 'bas' ser donné-->
       <a href="#bas">go to footer</a>
-          <!--vers une autre page-->
+      <!--vers une autre page-->
       <a href="contact.html">contact me !</a>
-      <!--vers une page web-->
-      <a title="vers wikipedia" href="https://fr.wikipedia.org/wiki/PageRank"
-        >En savoir plus</a>
-      </div>
+      <!--vers une page web qui prend la place ou ouvre un autre onglet-->
+      <a
+        title="vers wikipedia"
+        href="https://fr.wikipedia.org/wiki/PageRank"
+        target="_self/_blank"
+        >En savoir plus</a
+      >
+      <!--vers la boite mail de l'utilisateur-->
+      <a href="mailto:someone@example.com">Send email</a>
+      <!--vers la section interne avec id 'C4'-->
+      <a href="#C4"></a>
+    </div>
 
-  <!--FORM-->
-  <div>
-    <form>
-      <label for="fname">First name:</label><br />
-      <!--l'attribut 'name' doit s'y trouver sinon, le form ne sera ps transmis-->
-      <input type="text" id="fname" name="fname" placeholder="atherine"/><br />
-      <!--placeholder mettra un text vible dans l'input-->
-      <input type="radio" id="other" name="gender" value="other" />
-      <label for="other">Other</label>
+    <!--FORM-->
+    <div>
+      <form action="/action_page.php" method="get/post" target="_blank/_self" autocomplete="on">
+        <label for="fname">First name:</label><br />
+        <!--l'attribut 'name' doit s'y trouver sinon, le form ne sera pas transmis-->
+        <!--'maxlength : nombre maximal de caractères à remplir-->
+        <!--'pattern' pour le Regex-->
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Catherine"
+          maxlength="10"
+          min=""
+          max=""
+          pattern="[A-Za-z]{3}"
+          required
+        /><br />
+        <!--nombre maximal de caractères à remplir-->
+        <!--placeholder mettra un texte visible dans l'input-->
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label>
 
-      <!--propose un choix. Size montre le no° d'éléments visibles-->
-      <select id="cars" name="cars" size="3">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-                <!--'selected' montrera l'option choisie par défaut-->
-        <option value="fiat" selected>Fiat</option>
-      </select>
+        <!--propose un choix. 'Size' montre le no° d'éléments visibles
+        'multiple' si on peut choisir plusieurs valeurs-->
+        <select id="cars" name="cars" size="3" multiple>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <!--'selected' montrera l'option choisie par défaut-->
+          <option value="fiat" selected>Fiat</option>
+        </select>
 
-      <label for="w3review">text introductif:</label>
-      <textarea id="w3review" name="w3review" rows="4" cols="50"> </textarea>
-      
-      <!--pour sousmission-->
-      <input type="submit" value="Submit" />
-    </form>
+        <label for="w3review">texte introductif:</label>
+        <!--textarea peut recevoir un no0 de rangées et de colonnes mais aussi un taille(width et height)-->
+        <textarea id="w3review" name="w3review" rows="4" cols="50"> </textarea>
 
-    <!--renvoie vers une action à réaliser avec les données
-        et renvoie soit sur une page remplace l'actuel ou vers une autre-->
-    <form action="/action_page.php" target="_blank/_self"></form>
-    
-    <input
-      type="text/number/button/checkbox/color/date/datetime-local/email/file/hidden/
+        <!--pour sousmission-->
+        <input type="submit" value="Submit" />
+      </form>
+      <!--pour les formulaires à plusieurs sections-->
+      <form action="/action_page.php">
+        <fieldset>
+          <legend>titre de la section</legend>
+          <!--non remplissable-->
+          <input disabled/>
+          <!--readonly permet de preremplir l'input et celui-ci ne pourra être modifié
+          C'est données seront reprises lors de l'envoi-->
+          <input readonly />
+        </fieldset>
+        <fieldset>
+        </fieldset>
+      </form> 
+
+      <input
+        type="text/number/button/checkbox/color/date/datetime-local/email/file/hidden/
                         image/month/password/radio/range/reset/search/submit/tel/time/url/week"
-    />
-  </div>
+      />
+    </div>
 
-  <!--AUDIO/VIDEO-->
-  <div>
-    <audio controls>
-      <!--controls propose un curseur évolutif-->
-      <source src="horse.mp3" type="audio/mpeg" />
-    </audio>
-    <video width="320" height="240" autoplay>
-      <!--'autoplay' remplace le controls si on veut que ça commence toute de suite-->
-      <source src="movie.mp4" type="video/mp4" />
-    </video>
-  </div>
-  
-  <!--LIEN VERS PAGE JS-->
+    <!--AUDIO/VIDEO-->
+    <div>
+      <audio controls>
+        <!--controls propose un curseur évolutif-->
+        <source src="horse.mp3" type="audio/mpeg" />
+      </audio>
+        <!--'autoplay' remplace le controls si on veut que ça commence toute de suite-->
+      <video width="320" height="240" autoplay>
+        <source src="movie.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!--IMAGES-->
+    <div>
+      <img src="http://image.com" alt="Girl in a jacket" />
+      <figure>
+        <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+      </figure>
+      <!--permet de mettre plusieurs images pourdiffréentes situations-->
+      <picture>
+        <source media="(min-width: 650px)" srcset="img_food.jpg" />
+        <source media="(min-width: 465px)" srcset="img_car.jpg" />
+        <img src="img_girl.jpg" style="width: auto" />
+      </picture>
+ 
+
+      <!--ZONES d'IMAGE CLIQUABLES-->
+      <!--L'image choisie reçoit l'attrut usemap avec un#devant le nom-->
+      <img src="workplace.jpg" alt="Workplace" usemap="#workmap" />
+      <map name="workmap">
+        <!--rectangle est défini par les coordonnées de deux points opposés-->
+        <area
+          shape="rect"
+          coords="34,44,270,350"
+          alt="Computer"
+          href="page1.html"
+        />
+        <!--polygone défini par les coordonnées de tous le points qui délimetent la forme-->
+        <area
+          shape="poly"
+          coords="290,172,333,250,45,23"
+          alt="Phone"
+          href="page2.html"
+        />
+        <!--cercle défini par les coordonnées du centre et rayon-->
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="page3.html" />
+      </map>
+    </div>
+
+    <!--IFRAME-->
+    <div>
+      <iframe src="url" title="description"> 
+        <!--si on veut cliquer sur un lien qui fait apparaitre dans l'iframe-->
+      <iframe src="demo_iframe.htm" name="iframe_a" title="description"></iframe>
+      <p><a href="site.com" target="iframe_a">titre du lien</a></p> 
+    </div> 
+
+    <!--ENTITES-->
+    <div>
+    < = &lt;
+    > = &gt;
+    espace = &nbsp;
+    & = &amp;
+    " = &quot;
+    ' = &apos;
+    € = &euro;
+    © =  	&copy;
+    😄 = &#128516;
+    😍 = &#128525;
+    💗 = &#128151;
+    </div>
+    
+    <!--LIEN VERS PAGE JS-->
     <script src="script.js"></script>
   </body>
 </html>
