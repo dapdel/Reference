@@ -155,6 +155,15 @@ substring(start, end)
 substr(start, length)
 */
 
+chiffre.toString()	
+/*poue transormer un chiffre en string*/	
+autresExeptions.includes(mot);	
+/*pour voir si un mot se trouve dans une liste*/	
+
+(nombre).toFixed(x);	
+/*défini le nombre de décimales (x) d'un nombre*/	
+
+
 arr1.push("toto");
 /* pour ajouter*/
 arr1.forEach(function(){}); 
