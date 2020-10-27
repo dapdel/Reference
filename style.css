@@ -9,7 +9,7 @@ section/div/p/a/...
 p::first-letter {}
 p::first-line {}
 div:last-child {} dernier element d'une div
-.toto:first-child {} dernier element d'une classe
+.toto:first-child {} premier element d'une classe
 li:nth-child(even/odd) {} elements pair ou impair
 main div:nth-of-type(2) {} le 2e div du 'main'
 

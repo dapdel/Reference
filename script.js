@@ -1,5 +1,21 @@
+
+
+//DECLARATION DE VARIABLES
+var a;
+var x, y, z;
+var x = bool/"string"/number;
+var objet = {key1: "valeur", key2:number, key3:bool};
+var arrayListe = [];
+var objects = [{}, [], function() {}];
+var empty = [undefined, null];
+
+<<<<<<< HEAD
+//MESSAGE DANS CONSOLE
 console.log("toto");
+console.log (z[index]);
 console.error("erreur!");
+
+
 /*réservé pour les messages d'erreur*/
 alert();
 /*pop-up*/
@@ -8,6 +24,7 @@ document.write();
 window.print();
 /*pour faire une impression*/
 
+<<<<<<< HEAD
 //DECLARATION DE VARIABLES
 var a;
 var x, y, z;
@@ -36,6 +53,18 @@ bodyEl.addEventListener("mouseover", function () {});
 body.appendChild(newDiv);
 
 element.children
+=======
+=======
+>>>>>>> f8b267143adce6eb805e7474ff210a19771a7f1f
+/*pour une string*///Accédez aux éléments du DOM
+document.getElementById()
+document.getElementsByClassName()
+document.getElementsByTagName()
+document.querySelector() 
+document.querySelectorAll() 
+/*permet de faire une recherche complexe dans le DOM, en mélangeant plusieurs procédés*/
+	element.children
+>>>>>>> 6138c8f8641b53278859933cb785f80343812db4
 /*retournera l'enfant direct*/
 element.parentElement
 /*retournera le parent direct*/
@@ -48,6 +77,7 @@ document.getElementById("demo").innerHTML = "My First JavaScript";
 typeof(variable);
 /*renvoie le type de la variable*/
 
+<<<<<<< HEAD
 //CONDITIONS
     if (condition1) {
     } else if (condition2){ 
@@ -82,10 +112,45 @@ typeof(variable);
       text += person[x];
     }
    /*boucle sur les propriétés d'un objet*/
+=======
+if (condition1) {
+} else if (condition2){ 
+} else {
+}
+;
+
+switch(expression) {
+  case x:
+    // code block
     break;
-    /*termine un switch ou une loop*/
-    continue;
-   /*sort de la boucle et reprend au dessus/*
+  case y:
+    // code block
+>>>>>>> 6138c8f8641b53278859933cb785f80343812db4
+    break;
+  default:
+    // code block
+};
+
+while (condition) {
+  // code block to be executed
+};
+
+for (i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+};
+
+for (x of ojets) {
+};
+/*boucle sur les éléments d'un objet*/
+
+for (x in person) {
+  text += person[x];
+}
+/*boucle sur les propriétés d'un objet*/
+break;
+/*termine un switch ou une loop*/
+continue;
+/*sort de la boucle et reprend au dessus/*
 
     /*avec les opérateurs de comparaison
     ===    égal
@@ -148,12 +213,27 @@ var IndexPositionDuMotdansUnePhrase = str.indexOf("mot");
 var IndexdeLaDernierePositionDunMotdansUnePhrase = str.lastIndexOf("mot");
 /*indexOf(), and lastIndexOf() return -1 if the text is not found*/
 var pos = str.indexOf("locate",15);
+<<<<<<< HEAD
 /*la fonction index permet de rajouter un index à partir du quel le comptage se fera
+=======
+/*la fonction index permet de rajouter un index ) partir du quel le colmptage se fera*/
 
-slice(start, end)
-substring(start, end)
-substr(start, length)
-*/
+chiffre.toString()
+/*poue transormer un chiffre en string*/
+autresExeptions.includes(mot);
+/*pour voir si un mot se trouve dans une liste*/
+
+(nombre).toFixed(x);
+/*défini le nombre de décimales (x) d'un nombre*/
+
+
+slice(start, end);
+substring(start, end);
+/*va chercher les parties de la string comprises entre les deux indices*/
+substr(start, length);
+split
+>>>>>>> 6138c8f8641b53278859933cb785f80343812db4
+
 
 arr1.push("toto");
 /* pour ajouter*/
