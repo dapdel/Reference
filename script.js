@@ -181,4 +181,14 @@ arr1.reduce(function(){});
  date();
  /* date d'ajd*/
  displayDate();
+ /*retourne une valeur entre 0 et 1*/
+ Math.random()
 
+ setTimeout(function () {
+  alert("28 secondes plus tards..")
+}, 28000);
+
+var intId = setInterval(function () {
+  alert("Toutes les secondes");
+}, 1000);
+clearInverval(intId);
