@@ -14,7 +14,7 @@ var x, y, z;
 var x = "value";
 var objet = {};
 var arrayListe = [];
-var objects = [{}, [], function() {}];
+var objets = [{}, [], function() {}];
 var empty = [undefined, null];
 
 
@@ -32,7 +32,7 @@ var newDiv = document.createElement("div");
 newDiv.innerText = "toto";
 /*retournerale texte sans les balises*/
 totoEl.innerHTML = "<span>coucou</span>";
-bodyEl.addEventListener("mouseover", function () {});
+bodyEl.addEventListener("mouseover"/"click"/"", function () {});
 body.appendChild(newDiv);
 
 element.children
@@ -47,6 +47,7 @@ document.getElementById("demo").innerHTML = "My First JavaScript";
 
 typeof(variable);
 /*renvoie le type de la variable*/
+var longueurDeLaVariable = variable.length;
 
 //CONDITIONS
     if (condition1) {
@@ -113,6 +114,16 @@ function (a,b,c){}
 (a,b,c) =>{}
 ce sont deux façons d'écrire une fonction*/
 
+setTimeout(function () {
+  alert("28 secondes plus tard..")
+}, 28000);
+
+var intId = setInterval(function () {
+  alert("Toutes les secondes");
+}, 1000);
+// pour définir qqch qui se fait à intrevals fixe
+clearInverval(intId);
+// pour arreter qqch qui se fait à intrevals fixe
 
 /*fonction avec try et catch*/
 function myFunction() {
@@ -134,38 +145,14 @@ function myFunction() {
 //STOCKAGE LOCAL
 localStorage.setItem("nomDeClé", "valeur");
 /*pour sauver et enregistrer*/
-localStorage.getItem("nomCeClé")
+localStorage.getItem("nomCeClé");
 /* pour retrouver et charger*/
 
-//METHODES SUR STRING
-
-//METHODES SOR NOMBRE
-
-
-var longueurDeLaVarialeTxt = txt.length;
-var IndexPositionDuMotdansUnePhrase = str.indexOf("mot");
-/*Il existe une fonction search() quasi identique*/
-var IndexdeLaDernierePositionDunMotdansUnePhrase = str.lastIndexOf("mot");
-/*indexOf(), and lastIndexOf() return -1 if the text is not found*/
-var pos = str.indexOf("locate",15);
-/*la fonction index permet de rajouter un index à partir du quel le comptage se fera
-
-slice(start, end)
-substring(start, end)
-substr(start, length)
-*/
-
-chiffre.toString()	
-/*poue transormer un chiffre en string*/	
-autresExeptions.includes(mot);	
-/*pour voir si un mot se trouve dans une liste*/	
-
-(nombre).toFixed(x);	
-/*défini le nombre de décimales (x) d'un nombre*/	
-
-
+// sur ARRAY
 arr1.push("toto");
-/* pour ajouter*/
+/* pour ajouter élément à la fin. retourne la nouvelle longuer*/
+arr1.unshift("Lemon","Pineapple");
+/* pour ajouter des éléments au début. retourne la nouvelle longuer*/
 arr1.forEach(function(){}); 
 /* pour itérer*/
 arr1.concat(arr2);
@@ -173,22 +160,112 @@ arr1.concat(arr2);
 arr1.includes("toto");
 /* pour vérifier l'existence d'un élément*/
 arr1.map(function(){});
-/* pour transformer*/
+/* pour transformer tous les elements d'un array*/
 arr1.filter(function(){});
 /* pour filtrer*/
 arr1.reduce(function(){});
 /* pour "réduire"*/
+slice(start, end);
+/* retourne un array réduit de la position start à la pos end non compris*/
+array.splice(index, howmany, item1, ....., itemX)
+/* rajoute/enleve elements d'un array, et retourne les elements enlevés
+element.prototype.propriete = valeur;
+/* prototype permet de rjouter une nouvelle proeitété à un objet/array existant*/
+arr1.filter(fonction)
+/* renvoie un array des éléments qui ont passé trueà la condition*/
+arr1.pop();
+/* retourne et enleve le dernier element d'un array */
+arr1.shift();
+/* retourne et enleve le premier element d'un array */
+arr1.sort();
+/* pour tier par ordre alphabetique ou numéral */
+fruits.reverse();
+/* pour tier par ordre alphabetique inversé */
+points.sort(function(a, b){return b-a});
+/* pour tier par ordre numéral descendant */
+arr1.toString();
+/* prend les différents element pour en faire un string */
+
+// DATE
  date();
  /* date d'ajd*/
  displayDate();
- /*retourne une valeur entre 0 et 1*/
- Math.random()
+ getDate(),getDay(),getFullYear(), etc.
+ Date.now()
+ /* retourne ,le no° de millisecondes de puis 1971 */
+ Date.parse("March 21, 2012")
+ /*millisecondes entre le 21 mars et 1971*/
+ toDateString()
+ /* transfome la date en string lisible */
+ new Date().toLocaleDateString();
+ /*renvoie le format jj/mm/yyyy*/
+ new Date().toLocaleTimeString();
+  /*renvoie le format hh:mm:ss */
+ new Date().valueOf();
+ /* renvoie le temps en millisecondes
 
- setTimeout(function () {
-  alert("28 secondes plus tards..")
-}, 28000);
+// METHODES SUR STRING
+autresExeptions.includes(mot);	
+/*pour voir si un mot se trouve dans une liste*/
+substring(start, end)
+/* retourne une string réduite de la position start à la pos end non compris*/
+substr(start, length)
+/* retourne une string réduite de la position start de la longuer définie*/
+var IndexPositionDuMotdansUnePhrase = str.indexOf("mot");
+/*Il existe une fonction search() quasi identique*/
+var IndexdeLaDernierePositionDunMotdansUnePhrase = str.lastIndexOf("mot");
+/*indexOf(), and lastIndexOf() return -1 if the text is not found*/
+str.indexOf("motLocalise",15);
+/*permet de rajouter un index à partir du quel le comptage se fera*/
+str.charAt(position);
+/*retourne la lettre à cette position*/
+str.endsWith("mot");
+str.startsWith("mot")
+/* retourne un booleen. Vrai si la phrase termine/commence avec le mot défini*/
+str.includes(searchvalue, start);
+/* retourne un booleen. Vrai si la phrase contient un mot défini*/
+str.repeat(n);
+/* repete la string n */
+str.replace("mot1", "mot2");
+/* remplzce le mot1 par le mot2 d'une string*/
+str.search("mot");
+/* renvoie la position du mot... Si c'est -1 c'est qu'il nexist pas */
+str.split(" ")
+/* renvoie un array de tous les mots délimités par un espace */
+str.toLowerCase();
+str.toUpperCase();
+str.trim()
+/* enlève les espaces blancs de part et d'autres d'un mot*/
+parseFloat();
+/* trasnforme un nombre en string vers un nombre type number */
+parseInt();
+/* trasnforme un nombre en string vers un entier type number */
 
-var intId = setInterval(function () {
-  alert("Toutes les secondes");
-}, 1000);
-clearInverval(intId);
+// METHODES SUR NOMBRE
+chiffre.toString();	
+/*poue transormer un chiffre en string*/
+(nombre).toFixed(x);	
+/*défini le nombre de décimales (x) d'un nombre mais le transforme en string*/	
+Math.random();
+/*retourne une valeur entre 0 et 1*/
+Math.round();
+/* arrondi vers un entier*/
+Math.floor(); Math.trunc()
+/* arrondi vers l'entier du bas*/
+Number.isInteger();
+/* renvoie un boolen pour confirmer que nombre est un entier */
+Number.isNaN();
+num.toExponential();
+num.toString();
+Math.max(5, 10);
+Math.min(5, 10);
+/* renvoie le plus grand/petit nombre*/
+
+// DATA
+JSON.parse();
+/*transformer des données string en un array JS*/	
+JSON.stringify()
+/*transformer un array JS en données string*/	 
+	
+
+
