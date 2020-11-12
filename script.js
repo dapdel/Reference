@@ -167,7 +167,7 @@ arr1.reduce(function(){});
 /* pour "réduire"*/
 slice(start, end);
 /* retourne un array réduit de la position start à la pos end non compris*/
-array.splice(index, howmany, item1, ....., itemX)
+array.splice(index, howmany, item1, itemX)
 /* rajoute/enleve elements d'un array, et retourne les elements enlevés
 element.prototype.propriete = valeur;
 /* prototype permet de rjouter une nouvelle proeitété à un objet/array existant*/

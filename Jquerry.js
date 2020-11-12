@@ -63,4 +63,4 @@ $('body').on('click', function (e) {
   $(this).css('background-color', 'red');
   $(e.currentTarget).css('background-color', 'red');
 });
-$('body').one('click', function (e) {
+$('body').one('click', function (e) {});
