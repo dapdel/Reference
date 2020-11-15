@@ -266,6 +266,9 @@ JSON.parse();
 /*transformer des données string en un array JS*/	
 JSON.stringify()
 /*transformer un array JS en données string*/	 
-	
 
-
+//POSITION
+window.pageYOffset;
+/*pour connaitre la position du scroll en y*/
+window.scrollTo(x,y);
+/*pour revenir à un position x, y*/
