@@ -9,6 +9,7 @@ window.print();
 /*pour faire une impression*/
 
 //DECLARATION DE VARIABLES
+
 var a;
 var x, y, z;
 var x = "value";
@@ -16,25 +17,30 @@ var objet = {};
 var arrayListe = [];
 var objets = [{}, [], function() {}];
 var empty = [undefined, null];
+let a;
+/*let remplace var pour une varibale (qui change)*/
+const a;
+/*const remplace var pour une constante (qui ne change pas)*/
+const c = [];
+/*les arrays sont majoritairement des constantes: le contenu changera mais pas le contenant */
+
 
 
 //ACCES aux éléments du DOM
-document.getElementById("")
-document.getElementsByClassName("")
-document.getElementsByTagName("")
-document.querySelector("") 
+
+document.getElementById("");
+document.getElementsByClassName("");
+document.getElementsByTagName("");
+document.querySelector("");
 /*va chercher le premier du genre*/
-var listItems = document.querySelectorAll("li");
+document.querySelectorAll("li");
 /*va chercher tous du genre et retourne une Nodeliste*/
-var newDiv = document.createElement("div");
-/*lorsqu'on veut créer un nouvelle balise*/
+const input = document.querySelector('input').value;
+/*va chercher la valeur d'un input*/
 
-newDiv.innerText = "toto";
-/*retournerale texte sans les balises*/
-totoEl.innerHTML = "<span>coucou</span>";
-bodyEl.addEventListener("mouseover"/"click"/"", function () {});
-body.appendChild(newDiv);
-
+var x = document.getElementById("main");
+var y = x.getElementsByTagName("p");
+/*Pour chercher un élément dans un autre*/
 element.children
 /*retournera l'enfant direct*/
 element.parentElement
@@ -42,8 +48,33 @@ element.parentElement
 element.nextElementSibling  /  element.previousElementSibling
 /*retournera l'element suivant ou précédent*/
 
-document.getElementById("demo").innerHTML = "My First JavaScript";
-/*pour écrire dans le HTML de la section  avec id 'demo'*/
+//CREER et ENLEVER du DOM
+
+document.createElement("div");
+document.removeChild(element);
+document.appendChild(element);
+body.appendChild(newDiv);
+document.replaceChild(ancien, nouveau);
+
+//CHANGER des éléments du DOM
+
+element.innerHTML = "<span>coucou</span>";
+newDiv.innerText = "toto";
+/*retournera le texte sans les balises*/
+document.getElementById(id).attribute = new value;
+element.getAttribute("class");
+element.setAttribute("attribut", "valeur"),
+document.getElementById(id).style.property = new style;
+/*pour l'ajout d'une nouvelle propiété dans le CSS*/
+
+// EVENTS
+
+document.getElementById("myBtn").hasAttribute("onclick");
+document.getElementById(id).onclick = function(){code}
+/*onclick, ondblclick, ondrag, ondragend:fin du drag,  */
+bodyEl.addEventListener("click", function () {});
+/*mouseover, click, dblclick, drag, dragend */
+
 
 typeof(variable);
 /*renvoie le type de la variable*/
@@ -83,6 +114,9 @@ var longueurDeLaVariable = variable.length;
       text += person[x];
     }
    /*boucle sur les propriétés d'un objet*/
+
+   arr.forEach(function (el,i){fonctionADefinir});
+   /*où el est chaque element del'array et i l'indice de celui-ci*/
     break;
     /*termine un switch ou une loop*/
     continue;
@@ -109,10 +143,13 @@ function nomDeLaFonction (argument1, argument2,argument3){
 var nouvelleVariableResultat = actionsARealiser;
 return nouvelleVariableResultat;
 }
-/*
-function (a,b,c){}
-(a,b,c) =>{}
-ce sont deux façons d'écrire une fonction*/
+const nomDeLaFonction = (arguments) => {};
+/* arrow fonction*/
+nomDeLaFonction();
+/*pout l'execution de la fonction */
+(a,b,c) => {};
+(a,b,c) => (condition) ? (renvoiSiVrairai) : (renvoiSiFaux);
+/*fonction ternaire */
 
 setTimeout(function () {
   alert("28 secondes plus tard..")
@@ -272,3 +309,13 @@ window.pageYOffset;
 /*pour connaitre la position du scroll en y*/
 window.scrollTo(x,y);
 /*pour revenir à un position x, y*/
+
+//CLIQUER UN ELEMENT
+e.currentTarget
+/*utile pour chercher un élément cliqué*/
+const opts = document.querySelectorAll('option');
+for (const opt of opts) {
+  opt.addEventListener('click', function (e) {
+    console.log(e.currentTarget.getAttribute('value'));
+  });
+}
