@@ -271,7 +271,7 @@ input[type="text"] {};
   /* C'est ce qui le séparera éventuellement de la margin*/
 }
 .liste {
-  list-style-type: circle/square/upper-roman/lower-alpha;
+  list-style-type: circle/square/upper-roman/lower-alpha/none;
   list-style-image: url("sqpurple.gif");
 }
 
