@@ -64,7 +64,7 @@ newDiv.innerText = "toto";
 document.getElementById(id).attribute = new value;
 element.getAttribute("class");
 element.setAttribute("attribut", "valeur"),
-document.getElementById(id).style.property = new style;
+document.getElementById(id).style.property = "new style";
 /*pour l'ajout d'une nouvelle propiété dans le CSS*/
 
 // EVENTS

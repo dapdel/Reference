@@ -95,7 +95,7 @@ input[type="text"] {};
 */
   opacity: 0.3;
   background: rgba(0, 128, 0, 0.3);
-  background-image: url(pain.jpg);
+  background-image: url("pain.jpg");
   background-size: 100% 100%;
   background-size: auto/length/cover/contain;
   /*où auto: iamge dans sa tille originale, cover:étirée pour rentrer,contain: image non modifiée dans osn entiereté*/
