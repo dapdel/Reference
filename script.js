@@ -116,7 +116,7 @@ var longueurDeLaVariable = variable.length;
    /*boucle sur les propriétés d'un objet*/
 
    arr.forEach(function (el,i){fonctionADefinir});
-   /*où el est chaque element del'array et i l'indice de celui-ci*/
+   /*où el est chaque element de l'array et i l'indice de celui-ci*/
     break;
     /*termine un switch ou une loop*/
     continue;
@@ -319,3 +319,6 @@ for (const opt of opts) {
     console.log(e.currentTarget.getAttribute('value'));
   });
 }
+//IMPORT/EXPORT
+export const movies= [{},{},{}];/*dans le fichier de data*/
+import { movies } from './src/movies'; /* dans le scrpit.js */
