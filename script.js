@@ -63,9 +63,14 @@ newDiv.innerText = "toto";
 /*retournera le texte sans les balises*/
 document.getElementById(id).attribute = new value;
 element.getAttribute("class");
+element.classList;
 element.setAttribute("attribut", "valeur"),
 document.getElementById(id).style.property = "new style";
 /*pour l'ajout d'une nouvelle propiété dans le CSS*/
+element.classList.contains("valeur");
+/* ou on peut faire add, remove, replace("oldValeur", "newValeur")*/
+btn.disabled = true;
+/*afin qu'un bouton soit disabled*/
 
 // EVENTS
 
@@ -215,11 +220,11 @@ arr1.pop();
 arr1.shift();
 /* retourne et enleve le premier element d'un array */
 arr1.sort();
-/* pour tier par ordre alphabetique ou numéral */
+/* pour trier par ordre alphabetique ou numéral */
 fruits.reverse();
-/* pour tier par ordre alphabetique inversé */
+/* pour trier par ordre alphabetique inversé */
 points.sort(function(a, b){return b-a});
-/* pour tier par ordre numéral descendant */
+/* pour trier par ordre numéral descendant */
 arr1.toString();
 /* prend les différents element pour en faire un string */
 
@@ -302,7 +307,13 @@ Math.min(5, 10);
 JSON.parse();
 /*transformer des données string en un array JS*/	
 JSON.stringify()
-/*transformer un array JS en données string*/	 
+/*transformer un array JS en données string*/
+
+//GESTION de TEMPS
+setInterval();
+clearInterval();
+setTimeout();
+clearTimeout();	
 
 //POSITION
 window.pageYOffset;

@@ -5,13 +5,25 @@ section/div/p/a/...
 .blabla {} :en lien avec une class
 #blabla {} en lien avec un id
 [attr="value"] {}
+.class1.class2 collés:selection d'en element avec deux classes
+", "     pour appliquer à plusieurs sélecteurs
+"  "      pour tous les enfants
+">"    pour les enfant directs
+div ~+p {};   pour l'ement p juste après la div (adjacent sibling)
+div ~ p {};  pour tous les elements p juste après la div (general sibling)
+"div.toto" pour la div ayant la class "toto"
+un peu plus: +, ~...
+input[type="text"] {};
 
 p::first-letter {}
 p::first-line {}
+::after pour mettre qqch après 
+::before
 div:last-child {} dernier element d'une div
 .toto:first-child {} premier element d'une classe
 li:nth-child(even/odd) {} elements pair ou impair
 main div:nth-of-type(2) {} le 2e div du 'main'
+:not(selector){} elemnent qui n'est pas...
 
 input:checked {}
 input:focus {} lorsquel'input est cliqué
@@ -66,8 +78,8 @@ input[type="text"] {};
   /*le postionnement absolute se fait par/rapport à un contenant qui lui est en position relative ou p-r à la fenêtre*/
   /*le positionnement relatif se mettra sur sa position par défaut avec left/right/top/bottom*/
   float: none;
-
   /*positionnement en dehors du flux... peut contenir left et right*/
+
   display: flex;
   /*à mettre sur le contenant*/
   flex-direction: row/row-reverse/column/column-reverse;
@@ -75,13 +87,14 @@ input[type="text"] {};
   justify-content: flex-start/flex-end/center/space-between/space-around;
   flex-basis: 100px;
   /*donnera la taille des parties du flex */
-
   flex-grow: 3;
   /* à placer sur le contenu et sera 3x plus grand que les autres*/
   flex-shrink: 2;
   /*2x plus petit*/
   align-items: stretch/center/flex-start/flex-end/baseline;
   /* va permettre de positionner verticalementle texte dans son contenant*/
+  order: 1;
+  /*si on veut changer l'odre du flex bien mettre sur tous les elements qui changent de position*/
 }
 
 .background {
@@ -145,6 +158,11 @@ input[type="text"] {};
   /*par défayt la forme sera elliptique à moins de stipuler un cercle*/
   background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
   /* pour un effet psychedelique*/
+}
+
+.liens {
+  cursor: pointer;
+  /*cursor multiples possibles: voir internet*/
 }
 
 .font {
@@ -402,25 +420,25 @@ ou comme les gradients:
 /* selon Bootstrap */
 .container {
   width: 1140px;
-  margin: auto; 
+  margin: auto;
 }
-@media screen and (max-width:1200px){
-  .container{
+@media screen and (max-width: 1200px) {
+  .container {
     width: 960px;
   }
 }
-@media screen and (max-width:992px){
-  .container{
+@media screen and (max-width: 992px) {
+  .container {
     width: 720px;
   }
 }
-@media screen and (max-width:768px){
-  .container{
+@media screen and (max-width: 768px) {
+  .container {
     width: 540px;
   }
 }
-@media screen and (max-width:576px){
-  .container{
+@media screen and (max-width: 576px) {
+  .container {
     width: 100%;
   }
 }
@@ -437,3 +455,16 @@ ou comme les gradients:
 
 /*PSEUDO CLASS
 TOOLTIPS:COMMENT FAIRE TRIANGLE?*/
+
+/*ACCESSIBILITY*/
+
+.visually-hidden {
+  position: absolute !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+/*utiliser cette classe à la place de display:none ou visibility:hidden permet de cacher du texte à l'écran mais permet aux lecteurs d'écran de les lire*/
