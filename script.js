@@ -227,6 +227,8 @@ points.sort(function(a, b){return b-a});
 /* pour trier par ordre numéral descendant */
 arr1.toString();
 /* prend les différents element pour en faire un string */
+Math.max(...array1);
+/*renvoie le max d'un aray
 
 // DATE
  date();

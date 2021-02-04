@@ -214,6 +214,11 @@
     </div>
 
     <!--IMAGES-->
+	<!-- pour chercher les images:
+	../remonte d'un cran, 
+	../../montra donc de deux dossiers, 
+	./ pour chercher qqch dans le même dossier, 
+	et si on met rien, ça va le chercher dans les nodes modules-->
     <div>
       <img src="http://image.com" alt="Girl in a jacket" />
       <figure>
@@ -273,36 +278,16 @@
     😍 = &#128525;
     💗 = &#128151;
     </div>
+	
+	<!--STYLE(CSS)-->
+	<h1 style="color:blue;text-align:center;">
 
     <!--Attributs vers FONCTIONS-->
     <p><button onclick="fctDansJS()">Click Me</button></p>
     <p><button ondblclick="fctDansJS()">Click Me</button></p>
     <p draggable="true" ondrag="myFunction(event)">Drag me!</p> 
     <p draggable="true" ondragend="myFunction(event)">Drag me!</p> 
-
-    <!--ACCESSIBILITY-->
-    <button class="btn-icon swiper-button-prev">
-      <i class="icon-arrow" aria-hidden="true"></i>
-      <span class="visually-hidden">Éléments précédents</span>
-    </button>
-      <!--s'il n'y a pas de aria-hidden, l'icone sera lue mais sasn donner des informations utiles... Mettre une class CSS visually-hidden qui permet d'entendre ce qu'il s'y passe sans le voir sur l'écran.-->
-      <!--idem pour lienssur svg-->
-    <a href="…">
-      <span class="visually-hidden">Le titre du lien</span>
-      <svg aria-hidden="true">…</svg>
-    </a>
-    <!--et idem pour une image en background-->
-    <div id="image">
-      <p class="visually-hidden">descriptif de l'imgae</p>
-    </div>
-      <!--signaler losrquu'n lien s'ouvre dans une nouvelles fenêtre-->
-    <a href="URL" target="_blank" aria-label="Lire l’article (nouvelle fenêtre)">Lire l’article</a>
-      <!--ou-->
-    <a href="URL" target="_blank" title="Lire l’article (nouvelle fenêtre)">Lire l’article</a>
-     <!--Ne jamais oublier l'attribut alt-->
-    <img src="http://image.com" alt="Girl in a jacket" />
-    <!--Pour naviguer avec le tabulateur utiliser l'attribut tabindex. tabindex="-1" ne s'arretera pas... tabindex= "0" et ainsi de suite suivra l'odre croissant des chiffres-->
-
+    
     <!--LIENS VERS PAGE JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="script.js"></script>
