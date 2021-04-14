@@ -9,3 +9,12 @@ créer nouveau reportory sur github et suivre les différentes étapes
 PARCEL
 npm install (pour istaller les node modules)
 npm start (pour lelancer sur le terminal local)
+
+REACT
+
+
+NODE
+nodemon
+
+ANGULAR
+ng serve
