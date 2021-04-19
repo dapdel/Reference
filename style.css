@@ -68,7 +68,7 @@ input[type="text"] {};
 }
 
 .position {
-  display: block/inline/inline-block/none;
+  display: block/inline/inline-block/none/flex;
   /*inline-block se ositionnera en inline mais permettra des margin et padding*/
   visibility: hidden;
   /*va garder l'espace du block caché */
@@ -310,6 +310,15 @@ img {
   object-fit: fill/contain/cover;
   /*fill: l'image sera étirée, contain: l'imge se mettra dedans, cover :l'image sera coupée pour rentrée totalement en gardant ses proportions*/
 }
+
+input{
+  -moz-appearance: textfield 
+  /*pour enlever les fleches d'un input type number */
+  
+}
+
+input:focus { outline: 0; }
+/* pour enlever le pourtour lorsque selectionné */
 
 .ombre {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
